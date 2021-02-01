@@ -24,17 +24,18 @@ img {
     position: absolute;
     
 }
+
 .first {
     width: 100%;
     height: 100%;
     background: linear-gradient(to top right, rgb(1, 66, 68), rgb(3, 173, 179) );
-    opacity: 0;
+    opacity: 1;
 }
 
 h1 {
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: 60pt;
-    color: rgb(100, 74, 9);
+    color: rgb(124, 92, 10);
     margin-top: 300px;
     transition: font-size 2s ease 0.5s;
     text-align: center;
@@ -47,7 +48,7 @@ p {
     margin-top: 200px;
     opacity: 0;
     text-align: center;
-    animation: sosnovka 3s ease 2.5s forwards, color 10s linear 2s forwards;
+    animation: sosnovka 3s ease 2.5s forwards, color 7s linear 2s forwards;
 }
 @keyframes sosnovka {
     from {opacity: 0;}
@@ -58,24 +59,24 @@ p {
     25% {color: rgb(215, 245, 83);}
     50% {color: rgb(232, 83, 245);}
     75% {color: rgba(6, 255, 47, 0.733);}
-    100% {color: rgb(148, 255, 237);};
+    100% {color: rgba(0, 255, 213, 0.562);};
 }
+
+
 
 .second {
-   opacity: 1;
-   scale: 0.1;
-
+   opacity: 0;
 }
 
-.second img {
+/* .second img {
     animation: lakediv 1s linear forwards;
 }
 @keyframes lakediv {
     from {transform: scale(0.1)};
     to {transform: scale(1)};
-}
+} */
 
-.second h2 {
+/* .slide.second h2 {
     position: absolute;
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: 50pt;
@@ -84,19 +85,49 @@ p {
     margin-left: 38%;
     transition: font-size 2s ease 1s, margin-left 3s ease 2s;
     animation: laketxt 5s ease 5s forwards;
-    opacity: 70%;
-}
-@keyframes laketxt {
+    opacity: 50%;
+} */
+/* @keyframes laketxt {
     0% {color: rgb(161, 145, 51)}
     25% {color: rgb(215, 245, 83);}
     50% {color: rgb(232, 83, 245);}
     75% {color: rgba(6, 255, 48, 0.63);}
-    100% {color: rgb(149, 223, 126);};
-}
+    100% {color: rgb(102, 226, 65);};
+} */
 .third {
     opacity: 0;
 }
 
 .forth {
     opacity: 0;
+}
+
+a:hover + div.slide {
+    opacity: 1;
+    transition: opacity 1s; 
+}
+a:hover + .slide.second img {
+    animation: lakeimg 1s linear forwards;
+}
+a:hover + .second h2 {
+    position: absolute;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 50pt;
+    color: rgb(161, 145, 51);
+    bottom: 50px;
+    margin-left: 38%;
+    transition: font-size 2s ease 1s, margin-left 3s ease 2s;
+    animation: laketxt 5s ease 5s forwards;
+}
+
+@keyframes laketxt {
+    0% {color: rgb(161, 145, 51)}
+    25% {color: rgb(215, 245, 83);}
+    50% {color: rgb(232, 83, 245);}
+    75% {color: rgba(6, 255, 48, 0.63);}
+    100% {color: rgb(102, 226, 65);};
+}
+@keyframes lakeimg {
+    from {transform: scale(0.1)};
+    to {transform: scale(1)};
 }
