@@ -45,55 +45,28 @@ p {
     color: rgb(28, 190, 101);
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 50pt;
+    font-weight: 600;
     margin-top: 200px;
     opacity: 0;
     text-align: center;
-    animation: sosnovka 3s ease 2.5s forwards, color 7s linear 2s forwards;
+    animation: sosnovka 3s ease 1.5s forwards, color 6s linear 2s forwards;
 }
 @keyframes sosnovka {
     from {opacity: 0;}
     to {opacity: 1;}
 }
 @keyframes color {
-    0% {color: rgb(83, 245, 218);}
+    0% {color: rgb(248, 149, 1);}
     25% {color: rgb(215, 245, 83);}
     50% {color: rgb(232, 83, 245);}
     75% {color: rgba(6, 255, 47, 0.733);}
     100% {color: rgba(0, 255, 213, 0.562);};
 }
 
-
-
 .second {
    opacity: 0;
 }
 
-/* .second img {
-    animation: lakediv 1s linear forwards;
-}
-@keyframes lakediv {
-    from {transform: scale(0.1)};
-    to {transform: scale(1)};
-} */
-
-/* .slide.second h2 {
-    position: absolute;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    font-size: 50pt;
-    color: rgb(161, 145, 51);
-    bottom: 50px;
-    margin-left: 38%;
-    transition: font-size 2s ease 1s, margin-left 3s ease 2s;
-    animation: laketxt 5s ease 5s forwards;
-    opacity: 50%;
-} */
-/* @keyframes laketxt {
-    0% {color: rgb(161, 145, 51)}
-    25% {color: rgb(215, 245, 83);}
-    50% {color: rgb(232, 83, 245);}
-    75% {color: rgba(6, 255, 48, 0.63);}
-    100% {color: rgb(102, 226, 65);};
-} */
 .third {
     opacity: 0;
 }
@@ -102,14 +75,19 @@ p {
     opacity: 0;
 }
 
-a:hover + div.slide {
+
+
+
+
+
+a:focus + div.slide {
     opacity: 1;
     transition: opacity 1s; 
 }
-a:hover + .slide.second img {
+a:focus + .slide.second img {
     animation: lakeimg 1s linear forwards;
 }
-a:hover + .second h2 {
+a:focus + .second h2 {
     position: absolute;
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: 50pt;
@@ -118,6 +96,7 @@ a:hover + .second h2 {
     margin-left: 38%;
     transition: font-size 2s ease 1s, margin-left 3s ease 2s;
     animation: laketxt 5s ease 5s forwards;
+    z-index: 1;
 }
 
 @keyframes laketxt {
@@ -131,3 +110,47 @@ a:hover + .second h2 {
     from {transform: scale(0.1)};
     to {transform: scale(1)};
 }
+
+
+
+
+
+
+a:focus + .slide.third img {
+    animation: forestimgrotate 1s linear forwards, forestimg 1s linear forwards; 
+}
+
+@keyframes forestimgrotate {
+    0% {transform: rotate(0deg)}
+    100% {transform: rotate(360deg)}
+}
+
+@keyframes forestimg {
+    0% {zoom: 10%;}
+    10% {zoom: 10%;}
+    20% {zoom: 20%;}
+    60% {zoom: 30%;}
+    80% {zoom: 40%}
+    100% {zoom: 100%;}
+}
+
+
+a:focus + .third h2 {
+    position: absolute;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 50pt;
+    color: rgb(51, 161, 51);
+    margin-top: 700px;
+    margin-left: 38%;
+    transition: font-size 3s ease 0.5s, margin-left 2s ease 2s, margin-top 2.5s ease 4s;
+    animation: foresttxt 5s ease 4s forwards;
+    z-index: 1;
+}
+@keyframes foresttxt {
+    0% {color: rgb(161, 145, 51)}
+    25% {color: rgb(215, 245, 83);}
+    50% {color: rgb(232, 83, 245);}
+    75% {color: rgba(6, 255, 48, 0.884);}
+    100% {color: rgba(60, 255, 0, 0.664);};
+}
+
