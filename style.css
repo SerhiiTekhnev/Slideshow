@@ -20,6 +20,20 @@ img {
     height: 100%;
 }
 
+a {
+    display: inline-block;
+    text-decoration: none;
+    border: 1px solid #00948d;
+    width: 80px;
+    padding: 3px;
+    text-align: center;
+    color: rgb(255, 185, 9);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+a:hover {
+    background-color: darkturquoise;
+}
+
 .slide {
     position: absolute;
     
@@ -75,11 +89,6 @@ p {
     opacity: 0;
 }
 
-
-
-
-
-
 a:focus + div.slide {
     opacity: 1;
     transition: opacity 1s; 
@@ -110,11 +119,6 @@ a:focus + .second h2 {
     from {transform: scale(0.1)};
     to {transform: scale(1)};
 }
-
-
-
-
-
 
 a:focus + .slide.third img {
     animation: forestimgrotate 1s linear forwards, forestimg 1s linear forwards; 
@@ -154,3 +158,47 @@ a:focus + .third h2 {
     100% {color: rgba(60, 255, 0, 0.664);};
 }
 
+
+
+
+
+
+a:focus + .slide.forth img {
+    animation: dniproimg3d 1s linear forwards, dniproimg 1s linear forwards; 
+}
+
+
+@keyframes dniproimg {
+    0% {zoom: 10%;}
+    10% {zoom: 10%;}
+    20% {zoom: 20%;}
+    60% {zoom: 30%;}
+    80% {zoom: 40%}
+    100% {zoom: 100%;}
+}
+@keyframes dniproimg3d {
+
+}
+
+a:focus + .forth h2 {
+    position: absolute;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 50pt;
+    color: rgb(51, 161, 51);
+    margin-top: 700px;
+    margin-left: 38%;
+    transition: font-size 3s ease 5s, margin-left 2s ease 0.5s, margin-top 8s ease 0.5s;
+    animation: dniprotxtrotate 5s ease 1s forwards, dniprotxtcolor 7s linear 5s forwards;
+    z-index: 1;
+}
+@keyframes dniprotxtcolor {
+    0% {color: rgb(161, 145, 51)}
+    25% {color: rgb(215, 245, 83);}
+    50% {color: rgb(232, 83, 245);}
+    75% {color: rgba(6, 255, 48, 0.884);}
+    100% {color: rgba(0, 255, 157, 0.445);};
+}
+@keyframes dniprotxtrotate {
+    0% {transform: rotate(0deg)}
+    100% {transform: rotate(720deg)}
+}
