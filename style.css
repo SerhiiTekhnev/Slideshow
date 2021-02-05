@@ -158,21 +158,20 @@ a:focus + .third h2 {
 
 a:focus + .slide.forth img {
     animation: dniproimg3d 2s linear forwards;
-   
 }
-@keyframes dniproimg {
+/* @keyframes dniproimg {
     0% {zoom: 10%;}
     10% {zoom: 10%;}
     20% {zoom: 20%;}
     60% {zoom: 30%;}
     80% {zoom: 40%}
     100% {zoom: 100%;}
-}
+} */
 @keyframes dniproimg3d {
-    0% {transform: rotate3d(1, 1, 1, 0deg);}
-    25% {transform: rotate3d(1, 1, 1, 90deg);}
+    0% {transform: rotate3d(0, 0, 0, 0deg);}
+    /* 25% {transform: rotate3d(1, 1, 1, 90deg);}
     50% {transform: rotate3d(1, 1, 1, 180deg);}
-    75% {transform: rotate3d(1, 1, 1, 270deg);}
+    75% {transform: rotate3d(1, 1, 1, 270deg);} */
     100% {transform: rotate3d(1, 1, 1, 360deg);}
 
 }
