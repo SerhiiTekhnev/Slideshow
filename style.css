@@ -104,13 +104,14 @@ a:focus + .second h2 {
     transition: font-size 2s ease 1s, margin-left 3s ease 2s;
     animation: laketxt 5s ease 5s forwards;
     z-index: 1;
+    opacity: 70%;
 }
 @keyframes laketxt {
     0% {color: rgb(161, 145, 51)}
     25% {color: rgb(215, 245, 83);}
     50% {color: rgb(232, 83, 245);}
     75% {color: rgba(6, 255, 48, 0.63);}
-    100% {color: rgb(102, 226, 65);};
+    100% {color: rgba(65, 226, 113, 0.726);};
 }
 @keyframes lakeimg {
     from {transform: scale(0.1)};
@@ -156,10 +157,9 @@ a:focus + .third h2 {
 }
 
 a:focus + .slide.forth img {
-    animation: dniproimg3d 1s linear forwards, dniproimg 1s linear forwards; 
+    animation: dniproimg3d 2s linear forwards;
+   
 }
-
-
 @keyframes dniproimg {
     0% {zoom: 10%;}
     10% {zoom: 10%;}
@@ -169,11 +169,18 @@ a:focus + .slide.forth img {
     100% {zoom: 100%;}
 }
 @keyframes dniproimg3d {
+    0% {transform: rotate3d(1, 1, 1, 0deg);}
+    25% {transform: rotate3d(1, 1, 1, 90deg);}
+    50% {transform: rotate3d(1, 1, 1, 180deg);}
+    75% {transform: rotate3d(1, 1, 1, 270deg);}
+    100% {transform: rotate3d(1, 1, 1, 360deg);}
 
 }
+
 .forth h2 {
     margin-top: 1%;
 }
+
 a:focus + .forth h2 {
     position: absolute;
     font-family: Georgia, 'Times New Roman', Times, serif;
@@ -181,8 +188,8 @@ a:focus + .forth h2 {
     color: rgb(51, 161, 51);
     margin-top: 47%;
     margin-left: 38%;
-    transition: font-size 3s ease 5s, margin-left 2s ease 0.5s, margin-top 8s ease 2.5s;
-    animation: dniprotxtrotate 5s ease 3s forwards, dniprotxtcolor 7s linear 5s forwards;
+    transition: font-size 3s ease 5s, margin-left 2s ease 0.5s, margin-top 8s ease 3s;
+    animation: dniprotxtrotate 5s ease 3.3s forwards, dniprotxtcolor 7s linear 5s forwards;
     z-index: 1;
 }
 @keyframes dniprotxtcolor {
@@ -190,7 +197,7 @@ a:focus + .forth h2 {
     25% {color: rgb(215, 245, 83);}
     50% {color: rgb(232, 83, 245);}
     75% {color: rgba(6, 255, 48, 0.884);}
-    100% {color: rgba(0, 195, 255, 0.445);}
+    100% {color: rgba(0, 255, 191, 0.377);}
 }
 @keyframes dniprotxtrotate {
     0% {transform: rotate(0deg)}
