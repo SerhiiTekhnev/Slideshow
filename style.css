@@ -90,8 +90,14 @@ a:focus + div.slide {
     transition: opacity 1s; 
 }
 
+
+.slide.second img {
+    transform: scale(0.1)
+}
+
 a:focus + .slide.second img {
-    animation: lakeimg 1s linear forwards;
+    transform: none;
+    transition: transform 1s linear;
 }
 
 a:focus + .second h2 {
@@ -113,10 +119,7 @@ a:focus + .second h2 {
     75% {color: rgba(6, 255, 48, 0.63);}
     100% {color: rgba(65, 226, 113, 0.726);};
 }
-@keyframes lakeimg {
-    from {transform: scale(0.1)};
-    to {transform: scale(1)};
-}
+
 
 a:focus + .slide.third img {
     animation: forestimgrotate 1s linear forwards, forestimg 1s linear forwards; 
