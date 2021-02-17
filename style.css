@@ -32,13 +32,13 @@ a {
     color: rgb(255, 185, 9);
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
+
 a:hover {
     background-color: darkturquoise;
 }
 
-.slide {
+div.slide {
     position: absolute;
-   
     z-index: -1;
 }
 
@@ -53,32 +53,24 @@ h1 {
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: 60pt;
     color: rgb(124, 92, 10);
+    text-shadow: 3px 1px 0px rgb(5, 73, 78);
     margin-top: 20%;
-    transition: font-size 2s ease 0.5s;
+    transition: font-size 2s ease 0.5s, text-shadow 2s ease 3.5s, color 2s ease 2s;
     text-align: center;
     z-index: 0;
 }
 
 p {
-    color: rgb(28, 190, 101);
+    color: rgb(28, 190, 176);
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 50pt;
     font-weight: 600;
+    text-shadow: 2px 1px 0px rgb(6, 255, 172);
     margin-top: 10%;
-    opacity: 0;
+    opacity: 60%;
     text-align: center;
-    animation: sosnovka 3s ease 1.5s forwards, color 6s linear 2s forwards;
-}
-@keyframes sosnovka {
-    from {opacity: 0;}
-    to {opacity: 1;}
-}
-@keyframes color {
-    0% {color: rgb(248, 149, 1);}
-    25% {color: rgb(215, 245, 83);}
-    50% {color: rgb(232, 83, 245);}
-    75% {color: rgba(6, 255, 47, 0.733);}
-    100% {color: rgba(0, 255, 213, 0.562);};
+    z-index: 1;
+    transition: font-size 2s ease 2s, text-shadow 2s ease 3.5s;
 }
 
 .second,.third,.forth {
@@ -104,70 +96,53 @@ a:focus + .second h2 {
     position: absolute;
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: 50pt;
-    color: rgb(161, 145, 51);
+    color: rgb(230, 198, 22);
     margin-top: 47%;
     margin-left: 38%;
     transition: font-size 2s ease 1s, margin-left 3s ease 2s;
-    animation: laketxt 5s ease 5s forwards;
     z-index: 1;
     opacity: 70%;
 }
-@keyframes laketxt {
-    0% {color: rgb(161, 145, 51)}
-    25% {color: rgb(215, 245, 83);}
-    50% {color: rgb(232, 83, 245);}
-    75% {color: rgba(6, 255, 48, 0.63);}
-    100% {color: rgba(65, 226, 113, 0.726);};
-}
 
+.slide.third img {
+    transform: rotate(-360deg);
+    
+}
 
 a:focus + .slide.third img {
-    animation: forestimgrotate 1s linear forwards, forestimg 1s linear forwards; 
+    transform: none;
+    transition: transform 1s linear;
 }
 
-@keyframes forestimgrotate {
-    0% {transform: rotate(0deg)}
-    100% {transform: rotate(360deg)}
-}
-
-@keyframes forestimg {
-    0% {zoom: 10%;}
-    10% {zoom: 10%;}
-    20% {zoom: 20%;}
-    60% {zoom: 30%;}
-    80% {zoom: 40%}
-    100% {zoom: 100%;}
+.third h2 {
+    margin-top: 10px;
 }
 
 a:focus + .third h2 {
     position: absolute;
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: 50pt;
-    color: rgb(51, 161, 51);
+    color: rgb(179, 255, 0);
+    opacity: 80%;
+    font-stretch: extra-expanded;
     margin-top: 47%;
     margin-left: 38%;
-    transition: font-size 3s ease 0.5s, margin-left 2s ease 2s, margin-top 2.5s ease 4s;
-    animation: foresttxt 5s ease 4s forwards;
+    transition: font-size 3s ease 3s, margin-left 2.5s ease 1s, margin-top 2.5s ease 1s;
     z-index: 1;
 }
-@keyframes foresttxt {
-    0% {color: rgb(161, 145, 51)}
-    25% {color: rgb(215, 245, 83);}
-    50% {color: rgb(232, 83, 245);}
-    75% {color: rgba(6, 255, 48, 0.884);}
-    100% {color: rgba(60, 255, 0, 0.664);};
+
+.slide.forth img {
+    transform: rotate3d(1, 1, 1, 360deg);
 }
 
 a:focus + .slide.forth img {
-    animation: dniproimg3d 2s linear forwards;
-}
-@keyframes dniproimg3d {
-    0% {transform: rotate3d(0, 0, 0, 0deg);}
-    100% {transform: rotate3d(1, 1, 1, 360deg);}
+    transform: none;
+    transition: transform 2s linear;
 }
 
 .forth h2 {
     margin-top: 1%;
+    transform: rotate(-720deg);
 }
 
 a:focus + .forth h2 {
@@ -175,20 +150,10 @@ a:focus + .forth h2 {
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: 50pt;
     color: rgb(51, 161, 51);
+    opacity: 80%;
     margin-top: 47%;
     margin-left: 38%;
-    transition: font-size 3s ease 5s, margin-left 2s ease 0.5s, margin-top 8s ease 3s;
-    animation: dniprotxtrotate 5s ease 3.3s forwards, dniprotxtcolor 7s linear 5s forwards;
+    transform: none;
+    transition: font-size 3s ease 5s, margin-left 2s ease 0.5s, margin-top 6s ease 3s, transform 4s ease 3.5s;
     z-index: 1;
-}
-@keyframes dniprotxtcolor {
-    0% {color: rgb(161, 145, 51)}
-    25% {color: rgb(215, 245, 83);}
-    50% {color: rgb(232, 83, 245);}
-    75% {color: rgba(6, 255, 48, 0.884);}
-    100% {color: rgba(0, 255, 191, 0.377);}
-}
-@keyframes dniprotxtrotate {
-    0% {transform: rotate(0deg)}
-    100% {transform: rotate(720deg)}
 }
